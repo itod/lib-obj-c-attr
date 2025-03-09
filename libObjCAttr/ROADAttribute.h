@@ -47,7 +47,8 @@
  * *Technical note: ROADAttributesCodeGenerator interprets this macro and generates appropriate code for creating attribute's objects,
   therefore the macro doesn't produce any code themselves.*
  */
-#define RF_ATTRIBUTE(AttrObject, ...)
+//#define RF_ATTRIBUTE(AttrObject, ...)
+#define DB_FIELD(AttrObject, ...)
 
 #endif
 
