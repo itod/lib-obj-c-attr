@@ -39,6 +39,9 @@
 #import "AnnotatedClass.h"
 #import "NSObject+RFMethodReflection.h"
 
+// TD adding this for nil IMP arg to class_addMethod
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
 
 @interface RFMethodInfoTest : XCTestCase {
     Class _testClass;
@@ -139,5 +142,7 @@ const static char *testClassName = "testClassName";
 
     [super tearDown];
 }
+
+#pragma clang diagnostic pop
 
 @end

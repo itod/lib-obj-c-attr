@@ -39,6 +39,10 @@
 #import "NSObject+RFPropertyReflection.h"
 
 
+// TD adding this for nil IMP arg to class_addMethod
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+
 @interface RFPropertyInfoTest : XCTestCase {
     Class _testClass;
 }
@@ -172,3 +176,5 @@ const static char *testClassName = "testClassName";
 }
 
 @end
+
+#pragma clang diagnostic pop
